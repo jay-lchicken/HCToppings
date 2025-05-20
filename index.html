@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        :root {
+            --primary-color: #4a6de5;
+            --secondary-color: #ff7e5f;
+            --text-color: #333;
+            --light-bg: #f9f9f9;
+            --card-shadow: 0 8px 30px rgba(0,0,0,0.12);
+            --transition: all 0.3s ease;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #89f7fe, #66a6ff);
+            min-height: 100vh;
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+            margin-bottom: 30px;
+            position: relative;
+        }
+
+        h1 {
+            font-size: 3.5em;
+            margin: 0;
+            background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            animation: bounce 2s infinite;
+            text-shadow: 0px 10px 20px rgba(0,0,0,0.1);
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-15px);
+            }
+        }
+
+        .subtitle {
+            font-size: 1.2em;
+            margin-top: 10px;
+            color: #555;
+            font-weight: 300;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .card {
+            background-color: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: var(--card-shadow);
+            transition: var(--transition);
+            transform: translateY(0);
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+        }
+
+        .card-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .card-content {
+            padding: 20px;
+        }
+
+        .card h2 {
+            margin: 0 0 15px;
+            color: var(--primary-color);
+            font-size: 1.5em;
+        }
+
+        .card p {
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .card-button {
+            display: inline-block;
+            background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 10px 20px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: var(--transition);
+        }
+
+        .card-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 60px;
+            padding: 20px;
+            color: #555;
+        }
+
+        @media (max-width: 768px) {
+            .grid {
+                grid-template-columns: 1fr;
+            }
+
+            h1 {
+                font-size: 2.5em;
+            }
+
+            .container {
+                padding: 20px 15px;
+            }
+        }
+
+        @media (min-width: 769px) and (max-width: 1024px) {
+            .grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Welcome to the Kitten's World!</h1>
+            <p class="subtitle">Explore the cuteness of these  friends</p>
+        </header>
+
+        <div class="grid">
+            <div class="card">
+                <img class="card-image" src="/istockphoto-1097957344-612x612.jpg" alt="Playful Kitten">
+                <div class="card-content">
+                    <h2>Playful Kitten</h2>
+                    <p>This adorable ball of energy loves to chase toys and pounce on anything that moves. Their playful antics will keep you entertained for hours!</p>
+                    <a href="#" class="card-button">Learn More</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img class="card-image" src="/images.jpg"" alt="Curious Cat">
+                <div class="card-content">
+                    <h2>Curious Explorer</h2>
+                    <p>Always on the lookout for new adventures, this curious cat investigates every nook and cranny. Their inquisitive nature makes every day an exciting journey.</p>
+                    <a href="#" class="card-button">Learn More</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img class="card-image" src="/sleeping-kitten.jpg" alt="Sleepy Cat">
+                <div class="card-content">
+                    <h2>Sleepy Dreamer</h2>
+                    <p>Nothing beats a lazy afternoon nap in a warm sunbeam. This professional napper has mastered the art of finding the coziest spots for peaceful slumbers.</p>
+                    <a href="#" class="card-button">Learn More</a>
+                </div>
+            </div>
+        </div>
+        <div style="text-align: center; margin: 40px 0;">
+             <a class="card-button" href="/more" style="font-size: 1.2em; padding: 16px 36px; box-shadow: 0 8px 24px rgba(74,109,229,0.12); letter-spacing: 1px; cursor: pointer;">
+                🏆 Cat of the Month
+             </a>
+        </div>
+
+        <footer>
+            <p>© 2025 Kitten Paradise | All rights reserved | Created with ❤️ for feline friends</p>
+        </footer>
+    </div>
+</body>
+</html>
